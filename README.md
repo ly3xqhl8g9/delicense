@@ -22,6 +22,6 @@ used delicenses, considering each owner only once.
 
 The delicensing payments are not a mechanism for revenue generation, but for justified recognition and positive feedback strengthening.
 
-A `delicense` consists of the `DELICENSE` text (`SHA1:2e49c6c58bb15484f231a7759f85aeed845ee883`) and the `DELICENSE.deon` configuration file.
+A `delicense` consists of the `LICENSE` text (`SHA1:2e49c6c58bb15484f231a7759f85aeed845ee883`) and the `LICENSE.deon` configuration file.
 
 The `delicense` considers the present time and the current data from the stance of the far future where data generation and transformation is costless, hence why the inequality of considering all delicense owners and all delicensed data as of equal value is a feature, it allows for the stability of the entire system.
