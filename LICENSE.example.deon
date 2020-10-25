@@ -1,0 +1,9 @@
+inject text from LICENSE
+
+
+{
+    owner <owner>
+    year <year>
+    payment <protocol>::<address>
+    #text
+}
