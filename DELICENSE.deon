@@ -1,0 +1,9 @@
+inject text from DELICENSE
+
+
+{
+    owner <owner>
+    year <year>
+    payment <protocol>::<address>
+    #text
+}
