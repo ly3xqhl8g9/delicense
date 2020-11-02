@@ -21,6 +21,11 @@ const analyze = async (
     output: string,
 ) => {
     const files = await getLicenseFiles(directory);
+
+    if (!files) {
+        return;
+    }
+
     const licenses = await parseLicenses(files);
     const licensors = await getLicensors(licenses);
 

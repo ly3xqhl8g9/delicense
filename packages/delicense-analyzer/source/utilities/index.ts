@@ -39,23 +39,27 @@ export async function* getFiles(
 export async function getLicenseFiles(
     directory: string | undefined,
 ) {
-    const dir = directory
-        ? path.isAbsolute(directory)
-            ? directory
-            : path.join(process.cwd(), directory)
-        : process.cwd();
+    try {
+        const dir = directory
+            ? path.isAbsolute(directory)
+                ? directory
+                : path.join(process.cwd(), directory)
+            : process.cwd();
 
-    const licenses: string[] = [];
+        const licenses: string[] = [];
 
-    for await (const filename of getFiles(dir)) {
-        const basename = path.basename(filename);
+        for await (const filename of getFiles(dir)) {
+            const basename = path.basename(filename);
 
-        if (basename === 'LICENSE.deon') {
-            licenses.push(filename);
+            if (basename === 'LICENSE.deon') {
+                licenses.push(filename);
+            }
         }
-    }
 
-    return licenses;
+        return licenses;
+    } catch (error) {
+        return;
+    }
 }
 
 
