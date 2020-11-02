@@ -1,0 +1,26 @@
+{
+    #packages
+    #package
+    #commit
+    yarnWorkspace false
+    runFrom ../
+}
+
+
+packages [
+    ./packages/delicense-cli
+]
+
+package {
+    manager yarn
+    publisher npm
+}
+
+commit {
+    engine git
+    combine true
+    root ''
+    fullFolder false
+    divider ' > '
+    message setup: package
+}
