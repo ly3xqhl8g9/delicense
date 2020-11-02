@@ -15,14 +15,20 @@
 
 
 <h3 align="center">
-    Analyzer
+    Command-Line Interface Utility
 </h3>
+
+
+
+## About
+
+The `CLI` is an utility for [`delicense`](https://github.com/ly3xqhl8g9/delicense).
 
 
 
 ## Install
 
-To install the `delicense-analyzer` ensure that the [NodeJS](https://nodejs.org) runtime is installed and run
+To install the `delicense` CLI ensure that the [NodeJS](https://nodejs.org) runtime is installed and run
 
 ``` bash
 npm install -g delicense

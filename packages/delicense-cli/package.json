@@ -15,7 +15,7 @@
         "email": "ly3xqhl8g9@plurid.com",
         "url": "https://github.com/ly3xqhl8g9/delicense/issues"
     },
-    "homepage": "https://github.com/ly3xqhl8g9/delicense/blob/master/packages/delicense-analyzer/README.md",
+    "homepage": "https://github.com/ly3xqhl8g9/delicense/blob/master/packages/delicense-cli/README.md",
     "publishConfig": {
         "access": "public"
     },
