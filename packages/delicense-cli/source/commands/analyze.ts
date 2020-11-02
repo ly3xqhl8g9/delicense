@@ -6,6 +6,10 @@
 
     // #region external
     import {
+        DelicenseOwner,
+    } from '../data/interfaces';
+
+    import {
         getLicenseFiles,
         parseLicenses,
         getLicensors,
@@ -59,7 +63,7 @@ const analyze = async (
         return;
     }
 
-    const list: any[] = Array
+    const list: DelicenseOwner[] = Array
         .from(licensors)
         .map(([_, value]) => ({...value}));
 

@@ -8,6 +8,14 @@
 
     import Deon from '@plurid/deon';
     // #endregion libraries
+
+
+    // #region external
+    import {
+        Delicense,
+        DelicenseOwner,
+    } from '../data/interfaces';
+    // #endregion external
 // #endregion imports
 
 
@@ -68,7 +76,7 @@ export const parseDeonFile = async (
 ) => {
     const deon = new Deon();
 
-    const data: any = await deon.parseFile(filepath);
+    const data = await deon.parseFile<Delicense>(filepath);
 
     return data;
 }
@@ -77,11 +85,14 @@ export const parseDeonFile = async (
 export const parseLicenses = async (
     filepaths: string[],
 ) => {
-    const licenses: any[] = [];
+    const licenses: Delicense[] = [];
 
     for (const filepath of filepaths) {
         const data = await parseDeonFile(filepath);
-        licenses.push(data);
+
+        if (data) {
+            licenses.push(data);
+        }
     }
 
     return licenses;
@@ -89,9 +100,9 @@ export const parseLicenses = async (
 
 
 export const getLicensors = async (
-    licenses: any[],
+    licenses: Delicense[],
 ) => {
-    const data: Map<string, any> = new Map();
+    const data: Map<string, DelicenseOwner> = new Map();
 
     for (const license of licenses) {
         const {
