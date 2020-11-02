@@ -16,6 +16,13 @@
 
 
 // #region module
+/**
+ * Analyzes the given directory, or the current working directory,
+ * for delicenses and outputs them (`'text' | 'deon' | 'json' | 'programmatic'`).
+ *
+ * @param directory
+ * @param output
+ */
 const analyze = async (
     directory: string | undefined,
     output: string,
@@ -68,6 +75,12 @@ const analyze = async (
         console.log(JSON.stringify(list));
         return;
     }
+
+    if (output === 'programmatic') {
+        return list;
+    }
+
+    return;
 }
 // #endregion module
 
