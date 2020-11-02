@@ -9,7 +9,9 @@
 
 
 
-The `delicense` is meant to state the radical openness of the associated data.
+The `delicense` is meant to state the radical openness of the associated `data`.
+
+Through `data` a wide array of entities are covered: from source code or other types of files, to schematics and recipes of software and/or hardware, to actual database contents.
 
 The `delicense` scaffolds an opt-in royalty-like payment system, where an user of the `delicense`, a `delicensor`, is free to choose if they want to pay-back 1% of their winnings to the pooled delicense owners.
 
@@ -25,3 +27,5 @@ The delicensing payments are not a mechanism for revenue generation, but for jus
 A `delicense` consists of the `LICENSE` text (`SHA1:2e49c6c58bb15484f231a7759f85aeed845ee883`) and the `LICENSE.deon` configuration file.
 
 The `delicense` considers the present time and the current data from the stance of the far future where data generation and transformation is costless, hence why the inequality of considering all delicense owners and all delicensed data as of equal value is a feature, it allows for the stability of the entire system.
+
+The `delicense-analyzer` is a Command-Line Interface tool to detect from the root of a directory all the delicense owners upon which the package depends on.
