@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+const delicense = require('../distribution/index.js');
+
+delicense.cli();

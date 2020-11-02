@@ -1,0 +1,61 @@
+{
+    "name": "delicense-analyzer",
+    "version": "0.0.0",
+    "description": "Command-Line Interface for Delicense",
+    "keywords": [
+        "delicense"
+    ],
+    "author": "ly3xqhl8g9 <ly3xqhl8g9@plurid.com> (https://plurid.com)",
+    "license": "SEE LICENSE IN LICENSE",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ly3xqhl8g9/delicense"
+    },
+    "bugs": {
+        "email": "ly3xqhl8g9@plurid.com",
+        "url": "https://github.com/ly3xqhl8g9/delicense/issues"
+    },
+    "homepage": "https://github.com/ly3xqhl8g9/delicense/blob/master/packages/delicense-analyzer/README.md",
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "main": "distribution/index.js",
+    "module": "distribution/index.es.js",
+    "typings": "distribution/index.d.ts",
+    "bin": {
+        "delicense": "binder/delicense"
+    },
+    "files": [
+        "distribution",
+        "binder"
+    ],
+    "preferGlobal": true,
+    "scripts": {
+        "test": "jest -c ./configurations/jest.config.js --coverage ./source",
+        "start": "rollup -c ./scripts/rollup.config.ts -w",
+        "build.removeTests": "rm -rf `find ./distribution/ -type d -name __tests__`",
+        "build.development": "rollup -c ./scripts/rollup.config.ts && yarn build.removeTests",
+        "build": "rollup -c ./scripts/rollup.config.ts && yarn build.removeTests",
+        "prebuild": "rm -rf distribution",
+        "prepublishOnly": "yarn build"
+    },
+    "dependencies": {
+        "@plurid/deon": "^0.0.28",
+        "commander": "^6.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.6",
+        "@typescript-eslint/eslint-plugin": "^4.6.0",
+        "@typescript-eslint/parser": "^4.6.0",
+        "eslint": "^7.12.1",
+        "jest": "^26.6.2",
+        "rollup": "^2.33.1",
+        "rollup-plugin-typescript2": "^0.29.0",
+        "ts-jest": "^26.4.3",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.5"
+    }
+}
