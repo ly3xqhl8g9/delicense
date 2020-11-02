@@ -17,13 +17,19 @@
 
 // #region module
 const analyze = async (
+    directory: string | undefined,
     output: string,
 ) => {
-    const files = await getLicenseFiles();
+    const files = await getLicenseFiles(directory);
     const licenses = await parseLicenses(files);
     const licensors = await getLicensors(licenses);
 
     if (output === 'text') {
+        if (licensors.size === 0) {
+            console.log('\n\tNo licensors.\n');
+            return;
+        }
+
         console.log('\n\tLicensors:\n');
 
         for (const [_, licensor] of licensors.entries()) {

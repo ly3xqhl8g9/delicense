@@ -23,13 +23,18 @@ const main = async (
 
     program
         .name('delicense')
+        .arguments('[directory]')
         .version('0.0.0', '-v, --version')
         .option(
             '-o, --output <type>',
             'output type: text, deon, json',
             'text',
-        ).action((options: any) => {
+        ).action((
+            directory,
+            options: any,
+        ) => {
             analyze(
+                directory,
                 options.output,
             );
         });

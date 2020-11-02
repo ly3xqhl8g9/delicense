@@ -36,8 +36,14 @@ export async function* getFiles(
 }
 
 
-export async function getLicenseFiles() {
-    const dir = process.cwd();
+export async function getLicenseFiles(
+    directory: string | undefined,
+) {
+    const dir = directory
+        ? path.isAbsolute(directory)
+            ? directory
+            : path.join(process.cwd(), directory)
+        : process.cwd();
 
     const licenses: string[] = [];
 
