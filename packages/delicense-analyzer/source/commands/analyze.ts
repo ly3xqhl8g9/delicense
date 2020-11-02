@@ -14,7 +14,20 @@ const analyze = async () => {
     const licenses = await parseLicenses(files);
     const licensors = await getLicensors(licenses);
 
-    console.log('licensors', licensors);
+    console.log('\n\tLicensors:\n');
+
+    for (const [_, licensor] of licensors.entries()) {
+        const {
+            owner,
+            payment,
+        } = licensor;
+
+        const paymentString = payment || 'no payment details';
+
+        console.log(`\t${owner} - ${paymentString}`);
+    }
+
+    console.log('');
 }
 // #endregion module
 
