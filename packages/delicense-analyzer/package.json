@@ -1,5 +1,5 @@
 {
-    "name": "delicense-analyzer",
+    "name": "delicense",
     "version": "0.0.0",
     "description": "Command-Line Interface for Delicense",
     "keywords": [

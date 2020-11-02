@@ -17,3 +17,26 @@
 <h3 align="center">
     Analyzer
 </h3>
+
+
+
+## Install
+
+To install the `delicense-analyzer` ensure that the [NodeJS](https://nodejs.org) runtime is installed and run
+
+``` bash
+npm install -g delicense
+```
+
+
+
+## Usage
+
+```
+Usage: delicense [options]
+
+Options:
+  -v, --version        output the version number
+  -o, --output <type>  output type: text, deon, json (default: "text")
+  -h, --help           display help for command
+```
