@@ -33,7 +33,7 @@ npm install -g delicense
 ## Usage
 
 ```
-Usage: delicense [options]
+Usage: delicense [options] [directory]
 
 Options:
   -v, --version        output the version number
