@@ -23,10 +23,15 @@ const main = async (
 
     program
         .name('delicense')
-        .usage('<command>')
         .version('0.0.0', '-v, --version')
-        .action(() => {
-            analyze();
+        .option(
+            '-o, --output <type>',
+            'output type: text, deon, json',
+            'text',
+        ).action((options: any) => {
+            analyze(
+                options.output,
+            );
         });
 
 
