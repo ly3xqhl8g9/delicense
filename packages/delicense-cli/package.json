@@ -1,6 +1,6 @@
 {
     "name": "delicense",
-    "version": "0.0.0",
+    "version": "0.0.0-0",
     "description": "Command-Line Interface for Delicense",
     "keywords": [
         "delicense"
@@ -43,19 +43,19 @@
         "prepublishOnly": "yarn build"
     },
     "dependencies": {
-        "@plurid/deon": "^0.0.28",
+        "@plurid/deon": "^0.0.42",
         "commander": "^6.2.0"
     },
     "devDependencies": {
-        "@types/node": "^14.14.6",
-        "@typescript-eslint/eslint-plugin": "^4.6.0",
-        "@typescript-eslint/parser": "^4.6.0",
-        "eslint": "^7.12.1",
-        "jest": "^26.6.2",
-        "rollup": "^2.33.1",
+        "@types/node": "^14.14.9",
+        "@typescript-eslint/eslint-plugin": "^4.8.2",
+        "@typescript-eslint/parser": "^4.8.2",
+        "eslint": "^7.14.0",
+        "jest": "^26.6.3",
+        "rollup": "^2.33.3",
         "rollup-plugin-typescript2": "^0.29.0",
-        "ts-jest": "^26.4.3",
+        "ts-jest": "^26.4.4",
         "ts-node": "^9.0.0",
-        "typescript": "^4.0.5"
+        "typescript": "^4.1.2"
     }
 }
