@@ -3,7 +3,7 @@
     <br />
     <br />
     <a target="_blank" href="https://github.com/ly3xqhl8g9/delicense/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/license-delicense-blue.svg?colorB=1380C3&style=for-the-badge" alt="License: delicense">
+        <img src="https://img.shields.io/badge/license-DEL-blue.svg?colorB=1380C3&style=for-the-badge" alt="License: DEL">
     </a>
 </p>
 
