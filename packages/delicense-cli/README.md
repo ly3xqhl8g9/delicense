@@ -45,7 +45,7 @@ The `delicense-analyzer` is a Command-Line Interface tool to detect from the roo
 
 ## Digression: On the Antonym of Legal
 
-The antonym of legal is not illegal. The law, `loi`, `lex`, is that which binds and bounds, that which constrains, obligatorily with force, `gewalt`. The antonym of legal is that which sets free, which dissipates and disperses, distributing without dividing.
+The antonym of legal is not illegal. The law, `loi`, `lex`, is that which binds and bounds, that which constrains, obligatorily with force, `gewalt`. The antonym of legal is that which sets free, which dissipates and disperses, distributing without dividing. The antonym of legal is dispersal.
 
 A dispersal view stands against a legal act. The legality is grounded and grounds the real. The dispersality floats above and beyond the legal.
 
