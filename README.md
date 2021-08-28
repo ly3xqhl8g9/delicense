@@ -15,7 +15,7 @@
 
 
 <h3 align="center">
-    Legal Framework for Delicensed Data
+    Dispersal Framework for Delicensed Data
 </h3>
 
 
@@ -40,3 +40,17 @@ A `delicense` consists of the `LICENSE` text (`SHA1:2e49c6c58bb15484f231a7759f85
 The `delicense` considers the present time and the current data from the stance of the far future where data generation and transformation is costless, hence why the inequality of considering all delicense owners and all delicensed data as of equal value is a feature, it allows for the stability of the entire system.
 
 The `delicense-analyzer` is a Command-Line Interface tool to detect from the root of a directory all the delicense owners upon which the package depends on.
+
+
+
+## Digression: On the Antonym of Legal
+
+The antonym of legal is not illegal. The law, `loi`, `lex`, is that which binds and bounds, that which constrains, obligatorily with force, `gewalt`. The antonym of legal is that which sets free, which dissipates and disperses, distributing without dividing.
+
+A dispersal view stands against a legal act. The legality is grounded and grounds the real. The dispersality floats above and beyond the legal.
+
+Dispersal contexts have no recourse to enforce the dispersion: there can be no state of and for dispersality, no courts to reign in.
+
+Dispersion does not afford the semantic universe of the judicial as it's counterpart, the legal system, can and does; therefore it must be content with being penaltyless: resting outside observance.
+
+Dispersality has no intake, whereas legality is only intake: effect, consequence, causation, implication.
