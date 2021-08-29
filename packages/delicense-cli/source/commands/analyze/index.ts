@@ -7,13 +7,13 @@
     // #region external
     import {
         DelicenseOwner,
-    } from '../data/interfaces';
+    } from '~data/interfaces';
 
     import {
         getDelicenseFiles,
         parseDelicenses,
         getDelicensors,
-    } from '../utilities';
+    } from '~utilities/index';
     // #endregion external
 // #endregion imports
 

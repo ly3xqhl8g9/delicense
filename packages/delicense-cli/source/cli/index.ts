@@ -7,7 +7,8 @@
 
 
     // #region external
-    import analyze from '../commands/analyze';
+    import analyze from '~commands/analyze';
+    import uplink from '~commands/uplink';
     // #endregion external
 // #endregion imports
 
@@ -34,6 +35,13 @@ const cli = async () => {
                 directory,
                 options.output,
             );
+        });
+
+    program
+        .command('uplink [directory]')
+        .description('uploads the delicensors from the directory and links them to delicense.org')
+        .action((directory) => {
+            uplink(directory);
         });
 
 
