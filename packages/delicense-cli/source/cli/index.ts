@@ -8,6 +8,8 @@
 
     // #region external
     import analyze from '~commands/analyze';
+    import login from '~commands/login';
+    import logout from '~commands/logout';
     import uplink from '~commands/uplink';
     // #endregion external
 // #endregion imports
@@ -21,8 +23,8 @@ const cli = async () => {
 
     program
         .name('delicense')
-        .arguments('[directory]')
         .version('0.0.0-0', '-v, --version')
+        .arguments('[directory]')
         .option(
             '-o, --output <type>',
             'output type: text, deon, json',
@@ -38,8 +40,38 @@ const cli = async () => {
         });
 
     program
+        .command('login')
+        .description('log into delicense.org')
+        .requiredOption(
+            '-i, --identonym <value>',
+            'account identonym',
+        )
+        .requiredOption(
+            '-k, --key <value>',
+            'account key',
+        )
+        .action((options) => {
+            const {
+                identonym,
+                key,
+            } = options;
+
+            login(
+                identonym,
+                key,
+            );
+        });
+
+    program
+        .command('logout')
+        .description('log out of delicense.org')
+        .action(() => {
+            logout();
+        });
+
+    program
         .command('uplink [directory]')
-        .description('uploads the delicensors from the directory and links them to delicense.org')
+        .description('uploads the delicensors under the directory and links them to the delicense.org vault')
         .action((directory) => {
             uplink(directory);
         });
