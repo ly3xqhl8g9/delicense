@@ -3,7 +3,7 @@ export interface Delicense {
     owner: string;
     year: string;
     text: string;
-    payment?: string;
+    payment?: string | object;
 }
 
 

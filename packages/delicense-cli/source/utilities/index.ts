@@ -44,7 +44,7 @@ export async function* getFiles(
 }
 
 
-export async function getLicenseFiles(
+export async function getDelicenseFiles(
     directory: string | undefined,
 ) {
     try {
@@ -82,42 +82,42 @@ export const parseDeonFile = async (
 }
 
 
-export const parseLicenses = async (
+export const parseDelicenses = async (
     filepaths: string[],
 ) => {
-    const licenses: Delicense[] = [];
+    const delicenses: Delicense[] = [];
 
     for (const filepath of filepaths) {
         const data = await parseDeonFile(filepath);
 
         if (data) {
-            licenses.push(data);
+            delicenses.push(data);
         }
     }
 
-    return licenses;
+    return delicenses;
 }
 
 
-export const getLicensors = async (
-    licenses: Delicense[],
+export const getDelicensors = async (
+    delicenses: Delicense[],
 ) => {
     const data: Map<string, DelicenseOwner> = new Map();
 
-    for (const license of licenses) {
+    for (const delicense of delicenses) {
         const {
             owner,
             payment,
-        } = license;
+        } = delicense;
 
-        const licensor = {
+        const delicensor = {
             owner,
             payment,
         };
 
         data.set(
             owner,
-            licensor,
+            delicensor,
         );
     }
 

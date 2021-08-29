@@ -10,9 +10,9 @@
     } from '../data/interfaces';
 
     import {
-        getLicenseFiles,
-        parseLicenses,
-        getLicensors,
+        getDelicenseFiles,
+        parseDelicenses,
+        getDelicensors,
     } from '../utilities';
     // #endregion external
 // #endregion imports
@@ -29,32 +29,35 @@
  */
 const analyze = async (
     directory: string | undefined,
-    output: string,
+    output: 'text' | 'deon' | 'json' | 'programmatic' = 'programmatic',
 ) => {
-    const files = await getLicenseFiles(directory);
-
+    const files = await getDelicenseFiles(directory);
     if (!files) {
         return;
     }
 
-    const licenses = await parseLicenses(files);
-    const licensors = await getLicensors(licenses);
+    const delicenses = await parseDelicenses(files);
+    const delicensors = await getDelicensors(delicenses);
 
     if (output === 'text') {
-        if (licensors.size === 0) {
-            console.log('\n\tNo licensors.\n');
+        if (delicensors.size === 0) {
+            console.log('\n\tNo delicensors.\n');
             return;
         }
 
-        console.log('\n\tLicensors:\n');
+        console.log('\n\tDelicensors:\n');
 
-        for (const [_, licensor] of licensors.entries()) {
+        for (const [_, delicensor] of delicensors.entries()) {
             const {
                 owner,
                 payment,
-            } = licensor;
+            } = delicensor;
 
-            const paymentString = payment || 'no payment details';
+            const paymentString = typeof payment === 'undefined'
+                ? 'no payment details'
+                : typeof payment === 'string'
+                    ? payment
+                    : JSON.stringify(payment, null, 12).replace('}', '\t}');
 
             console.log(`\t${owner} - ${paymentString}`);
         }
@@ -64,7 +67,7 @@ const analyze = async (
     }
 
     const list: DelicenseOwner[] = Array
-        .from(licensors)
+        .from(delicensors)
         .map(([_, value]) => ({...value}));
 
     if (output === 'deon') {
@@ -76,7 +79,7 @@ const analyze = async (
     }
 
     if (output === 'json') {
-        console.log(JSON.stringify(list));
+        console.log(JSON.stringify(list, null, 4));
         return;
     }
 
