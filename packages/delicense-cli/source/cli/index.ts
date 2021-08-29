@@ -23,19 +23,27 @@ const cli = async () => {
 
     program
         .name('delicense')
-        .version('0.0.0-0', '-v, --version')
-        .arguments('[directory]')
+        .version('0.0.0-0', '-v, --version');
+
+    program
+        .command('analyze [directory]')
+        .description('obtains the delicensors under the directory')
         .option(
             '-o, --output <type>',
             'output type: text, deon, json',
             'text',
-        ).action((
+        )
+        .action((
             directory,
             options: any,
         ) => {
+            const {
+                output,
+            } = options;
+
             analyze(
                 directory,
-                options.output,
+                output,
             );
         });
 
