@@ -1,6 +1,8 @@
 // #region imports
     // #region libraries
+    import ttypescript from 'ttypescript';
     import typescript from 'rollup-plugin-typescript2';
+    import { terser } from 'rollup-plugin-terser';
     // #endregion libraries
 // #endregion imports
 
@@ -21,6 +23,7 @@ export default {
     external: [
         'fs',
         'path',
+
         'commander',
         '@plurid/deon',
     ],
@@ -29,7 +32,17 @@ export default {
     },
     plugins: [
         typescript({
-            tsconfig: './tsconfig.json',
+            typescript: ttypescript,
+            rollupCommonJSResolveHack: true,
+            clean: true,
+        }),
+        terser({
+            mangle: false,
+            compress: false,
+            format: {
+                beautify: true,
+                comments: false,
+            },
         }),
     ],
 }
