@@ -1,7 +1,7 @@
 // #region imports
     // #region libraries
-    import program, {
-        CommanderStatic,
+    import {
+        program,
     } from 'commander';
     // #endregion libraries
 
@@ -14,17 +14,14 @@
 
 
 // #region module
-const main = async (
-    program: CommanderStatic,
-) => {
+const cli = async () => {
     program
-        .storeOptionsAsProperties(false)
-        .passCommandToAction(false);
+        .storeOptionsAsProperties(false);
 
     program
         .name('delicense')
         .arguments('[directory]')
-        .version('0.0.0', '-v, --version')
+        .version('0.0.0-0', '-v, --version')
         .option(
             '-o, --output <type>',
             'output type: text, deon, json',
@@ -40,12 +37,8 @@ const main = async (
         });
 
 
-    await program.parseAsync(process.argv);
-}
-
-
-const cli = () => {
-    main(program);
+    await program
+        .parseAsync(process.argv);
 }
 // #endregion module
 
