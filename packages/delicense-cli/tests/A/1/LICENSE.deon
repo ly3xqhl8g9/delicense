@@ -1,0 +1,9 @@
+inject text from LICENSE
+
+
+{
+    owner Some Owner 1
+    year 2021
+    #text
+    payment btc::3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5
+}

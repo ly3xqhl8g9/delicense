@@ -1,0 +1,17 @@
+inject text from LICENSE
+
+
+{
+    owner Some Owner 3
+    year 2021
+    #text
+    payment {
+        type IBAN
+        beneficiary '3, Inc.'
+        account CY 17 002 00128 0000001200527600
+        bicswift SOME_BIC_SWIFT
+        bankName Some Bank
+        bankAddress Some Adress
+        message Delicense payment
+    }
+}
