@@ -17,6 +17,13 @@
 
 
     // #region internal
+    import {
+        environment,
+
+        GRAPHQL_PATH,
+        PORT,
+    } from './data/constants';
+
     import schemas from './modules/schemas';
     import resolvers from './modules/resolvers';
     // #endregion internal
@@ -25,17 +32,6 @@
 
 
 // #region module
-const PORT = 55888;
-
-const GRAPHQL_PATH = '/graphql';
-
-
-const environment = {
-    production: process.env.ENV_MODE === 'production',
-    development: process.env.ENV_MODE === 'development',
-};
-
-
 const main = async () => {
     const server = express();
 
