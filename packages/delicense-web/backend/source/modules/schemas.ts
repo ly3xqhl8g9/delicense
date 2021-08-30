@@ -28,6 +28,16 @@ const baseSchema = gql`
     # }
 
     scalar Date
+
+    type Response {
+        status: Boolean!
+        error: Error
+    }
+
+    type Error {
+        path: String!
+        message: String!
+    }
 `;
 
 

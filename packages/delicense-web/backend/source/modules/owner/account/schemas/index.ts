@@ -8,29 +8,43 @@
 
 // #region module
 const query = gql`
-    type A {
-        _: Boolean
+    extend type Query {
+        getDelicensors(input: InputGetDelicensors!): ResponseGetDelicensors!
     }
 `;
 
 
 const mutation = gql`
-    type B {
-        _: Boolean
+    extend type Mutation {
+        uplink(input: InputUplink!): Response!
     }
 `;
 
 
 const types = gql`
-    type C {
-        _: Boolean
+    type ResponseGetDelicensors {
+        status: Boolean!
+        error: Error
+        data: [Delicensor!]
+    }
+
+    type Delicensor {
+        id: String
+        name: String!
+        payment: String!
     }
 `;
 
 
 const inputs = gql`
-    type D {
-        _: Boolean
+    input InputUplink {
+        delicensors: [InputDelicensor!]
+    }
+
+    input InputDelicensor {
+        id: String
+        name: String!
+        payment: String!
     }
 `;
 // #endregion module
