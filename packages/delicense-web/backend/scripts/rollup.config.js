@@ -30,10 +30,11 @@ const build = {
         'body-parser',
         'cookie-parser',
         'express',
-        'lodash.merge',
         'graphql-tag',
         'graphql',
         'graphql/language',
+        'lodash.merge',
+        'mongodb',
     ],
     plugins: [
         typescript({
