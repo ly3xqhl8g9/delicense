@@ -2,7 +2,7 @@
     // #region external
     import {
         generateResolvers,
-    } from '../utilities/resolvers';
+    } from '~utilities/graphql';
     // #endregion external
 
 

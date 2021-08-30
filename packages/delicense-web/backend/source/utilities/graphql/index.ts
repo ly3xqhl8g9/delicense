@@ -10,7 +10,7 @@
 export const generateResolvers = (
     ...imports: any[]
 ) => {
-    const resolvers = {};
+    const resolvers: any = {};
 
     merge(
         resolvers,
