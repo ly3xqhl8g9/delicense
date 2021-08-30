@@ -11,6 +11,15 @@
             "~data/*": [
                 "./source/data/*"
             ],
+            "~modules/*": [
+                "./source/modules/*"
+            ],
+            "~services/*": [
+                "./source/services/*"
+            ],
+            "~utilities/*": [
+                "./source/utilities/*"
+            ]
         },
 
         "outDir": "build",
