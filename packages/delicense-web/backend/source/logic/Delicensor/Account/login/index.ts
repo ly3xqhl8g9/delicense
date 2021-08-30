@@ -1,5 +1,5 @@
 // #region module
-const obliterate = async (
+const login = async (
     input: any,
     context: any,
 ) => {
@@ -10,5 +10,5 @@ const obliterate = async (
 
 
 // #region exports
-export default obliterate;
+export default login;
 // #endregion exports

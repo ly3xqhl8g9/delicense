@@ -6,6 +6,10 @@
 
     // #region external
     import {
+        Collections,
+    } from '~data/interfaces';
+
+    import {
         database,
     } from '../connection';
     // #endregion external
@@ -36,9 +40,11 @@ export const getCollections = async () => {
         return;
     }
 
-    return {
+    const collections: Collections = {
         admin,
         delicensors,
     };
+
+    return collections;
 }
 // #endregion module

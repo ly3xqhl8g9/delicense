@@ -16,6 +16,9 @@ const query = gql`
 
 const mutation = gql`
     extend type Mutation {
+        login(input: InputLogin!): Response!
+        logout(input: InputLogout!): Response!
+
         uplink(input: InputUplink!): Response!
     }
 `;
@@ -37,6 +40,15 @@ const types = gql`
 
 
 const inputs = gql`
+    input InputLogin {
+
+    }
+
+    input InputLogout {
+
+    }
+
+
     input InputUplink {
         delicensors: [InputDelicensor!]
     }

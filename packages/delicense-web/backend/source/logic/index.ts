@@ -7,7 +7,7 @@
 
 
 // #region exports
-export default {
+export {
     Delicensor,
 };
 // #endregion exports
