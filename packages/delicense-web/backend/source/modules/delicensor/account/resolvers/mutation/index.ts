@@ -33,7 +33,7 @@ export default {
         context,
     ),
 
-    generate: async (
+    accountGenerate: async (
         _: GraphQLRoot,
         { input }: GraphQLArgsInputOf<any>,
         context: Context,
@@ -41,7 +41,7 @@ export default {
         input,
         context,
     ),
-    obliterate: async (
+    accountObliterate: async (
         _: GraphQLRoot,
         { input }: GraphQLArgsInputOf<any>,
         context: Context,
