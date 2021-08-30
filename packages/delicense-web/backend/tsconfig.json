@@ -11,6 +11,9 @@
             "~data/*": [
                 "./source/data/*"
             ],
+            "~logic/*": [
+                "./source/logic/*"
+            ],
             "~modules/*": [
                 "./source/modules/*"
             ],
