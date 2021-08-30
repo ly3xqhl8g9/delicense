@@ -39,7 +39,7 @@
 const main = async () => {
     const collections = await getCollections();
     if (!collections) {
-        console.log('delicense error :: no database collections');
+        console.log('delicense backend error :: no database collections');
         return;
     }
 
@@ -83,7 +83,7 @@ const main = async () => {
 
 
     server.listen(PORT, () => {
-        console.log(`\n\tDelicense Backend Started on ${PORT}, http://localhost:${PORT}\n`);
+        console.log(`\n\tdelicense backend started on ${PORT}, http://localhost:${PORT}\n`);
     });
 }
 
