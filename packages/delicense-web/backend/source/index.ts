@@ -26,6 +26,10 @@
 
     import schemas from './modules/schemas';
     import resolvers from './modules/resolvers';
+
+    import {
+        getCollections,
+    } from './services/database';
     // #endregion internal
 // #endregion imports
 
@@ -33,6 +37,13 @@
 
 // #region module
 const main = async () => {
+    const collections = await getCollections();
+    if (!collections) {
+        console.log('delicense error :: no database collections');
+        return;
+    }
+
+
     const server = express();
 
     server.use(jsonParser());
@@ -46,15 +57,14 @@ const main = async () => {
         resolvers: {
             ...resolvers,
         },
-        context: (
-            {
-                req,
-                res,
-            }: any,
-        ) => {
+        context: ({
+            req,
+            res,
+        }) => {
             return {
                 request: req,
                 response: res,
+                collections,
             };
         },
         plugins: [
@@ -63,6 +73,7 @@ const main = async () => {
                 : ApolloServerPluginLandingPageGraphQLPlayground(),
         ],
     });
+
     await graphqlServer.start();
 
     graphqlServer.applyMiddleware({
