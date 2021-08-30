@@ -32,12 +32,21 @@
         "build": "yarn clean && yarn build.production"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "@plurid/dataface-mongo": "^0.0.0-0",
+        "apollo-server-express": "^3.3.0",
+        "body-parser": "^1.19.0",
+        "cookie-parser": "^1.4.5",
+        "express": "^4.17.1",
+        "graphql": "^15.5.2",
+        "lodash.merge": "^4.6.2",
+        "mongodb": "^4.1.1"
     },
     "devDependencies": {
         "@plurid/deon": "^0.0.0-4",
+        "@types/cookie-parser": "^1.4.2",
         "@types/express": "^4.17.13",
         "@types/jest": "^27.0.1",
+        "@types/lodash.merge": "^4.6.6",
         "@types/node": "^16.7.5",
         "@typescript-eslint/eslint-plugin": "^4.29.3",
         "@typescript-eslint/parser": "^4.29.3",
