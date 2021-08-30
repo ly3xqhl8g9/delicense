@@ -7,9 +7,9 @@
 
 
     // #region internal
-    import Owner from './owner/resolvers';
+    import delicensor from './delicensor/resolvers';
 
-    import dateResolver from './date';
+    import dateResolver from './general/date';
     // #endregion internal
 // #endregion imports
 
@@ -17,7 +17,7 @@
 
 // #region module
 const resolvers = generateResolvers(
-    Owner,
+    delicensor,
     dateResolver,
 );
 // #endregion module

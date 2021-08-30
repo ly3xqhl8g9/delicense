@@ -7,7 +7,7 @@
 
 
     // #region internal
-    import Owner from './owner/schemas';
+    import delicensor from './delicensor/schemas';
     // #endregion internal
 // #endregion imports
 
@@ -51,7 +51,7 @@ const schemas = [
 
     ...commonSchemas,
 
-    ...Owner,
+    ...delicensor,
 ];
 // #endregion module
 
