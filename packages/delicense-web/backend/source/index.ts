@@ -27,6 +27,9 @@
 // #region module
 const PORT = 55888;
 
+const GRAPHQL_PATH = '/graphql';
+
+
 const environment = {
     production: process.env.ENV_MODE === 'production',
     development: process.env.ENV_MODE === 'development',
@@ -36,7 +39,7 @@ const environment = {
 const main = async () => {
     const server = express();
 
-    server.use(jsonParser() as any);
+    server.use(jsonParser());
     server.use(cookieParser());
 
 
@@ -65,6 +68,11 @@ const main = async () => {
         ],
     });
     await graphqlServer.start();
+
+    graphqlServer.applyMiddleware({
+        app: server,
+        path: GRAPHQL_PATH,
+    });
 
 
     server.listen(PORT, () => {
