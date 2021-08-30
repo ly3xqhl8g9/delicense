@@ -25,7 +25,15 @@ const build = {
         }
     ],
     external: [
+        'apollo-server-express',
+        'apollo-server-core',
+        'body-parser',
+        'cookie-parser',
         'express',
+        'lodash.merge',
+        'graphql-tag',
+        'graphql',
+        'graphql/language',
     ],
     plugins: [
         typescript({
