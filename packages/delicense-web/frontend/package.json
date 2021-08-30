@@ -1,7 +1,7 @@
 {
-    "name": "delicense-web",
+    "name": "delicense-web-frontend",
     "version": "0.0.0-0",
-    "description": "Delicense Web",
+    "description": "Delicense Web Frontend",
     "keywords": [
         "delicense"
     ],
