@@ -32,7 +32,6 @@
         ],
 
         "declaration": false,
-        "declarationDir": "build",
         "sourceMap": false,
         "allowJs": false,
         "esModuleInterop": true,
