@@ -33,6 +33,7 @@
     },
     "dependencies": {
         "@plurid/dataface-mongo": "^0.0.0-0",
+        "@plurid/plurid-functions": "^0.0.0-16",
         "apollo-server-express": "^3.5.0",
         "body-parser": "^1.19.0",
         "cookie-parser": "^1.4.5",
