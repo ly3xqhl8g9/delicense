@@ -1,4 +1,11 @@
 // #region imports
+    // #region libraries
+    import {
+        uuid,
+    } from '@plurid/plurid-functions';
+    // #endregion libraries
+
+
     // #region external
     import {
         InputUplink,
@@ -26,17 +33,19 @@ const uplink = async (
         } = input;
 
 
-        const ownerID = 'unaccounted_owner_id';
+        const ownerID = 'owner_id' + uuid.multiple(2);
 
         for (const delicensor of delicensors) {
+            const delicensorID = uuid.multiple(3);
+
             const data = {
                 ...delicensor,
-                underOwner: ownerID
+                underOwner: ownerID,
             };
 
             database.addDocument(
                 collections.delicensors,
-                'one',
+                delicensorID,
                 {
                     ...data,
                 },
