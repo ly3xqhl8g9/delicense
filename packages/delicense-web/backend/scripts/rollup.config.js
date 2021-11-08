@@ -25,6 +25,7 @@ const build = {
         }
     ],
     external: [
+        '@plurid/dataface-mongo',
         'apollo-server-express',
         'apollo-server-core',
         'body-parser',
